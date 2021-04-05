@@ -22,6 +22,8 @@
 		091E9CEC261B658500C99735 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		091E9CEE261B658500C99735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		091E9CF7261B66E300C99735 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		0D5DE08169971F8655174B2E /* Pods-TheVeganMeals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVeganMeals.debug.xcconfig"; path = "Target Support Files/Pods-TheVeganMeals/Pods-TheVeganMeals.debug.xcconfig"; sourceTree = "<group>"; };
+		4B8027F19DB47CF560570B3B /* Pods-TheVeganMeals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVeganMeals.release.xcconfig"; path = "Target Support Files/Pods-TheVeganMeals/Pods-TheVeganMeals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,8 @@
 				091E9CF7261B66E300C99735 /* .swiftlint.yml */,
 				091E9CE4261B658100C99735 /* TheVeganMeals */,
 				091E9CE3261B658100C99735 /* Products */,
+				7145544B26B6E49C6A0540F3 /* Pods */,
+				573C0016ED43F001AB03637E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +140,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		573C0016ED43F001AB03637E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7145544B26B6E49C6A0540F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D5DE08169971F8655174B2E /* Pods-TheVeganMeals.debug.xcconfig */,
+				4B8027F19DB47CF560570B3B /* Pods-TheVeganMeals.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 091E9CF1261B658500C99735 /* Build configuration list for PBXNativeTarget "TheVeganMeals" */;
 			buildPhases = (
+				9995D8E55A8BFF8D76516397 /* [CP] Check Pods Manifest.lock */,
 				091E9CDE261B658100C99735 /* Sources */,
 				091E9CDF261B658100C99735 /* Frameworks */,
 				091E9CE0261B658100C99735 /* Resources */,
@@ -218,7 +239,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\U0010\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint autocorrect && ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		9995D8E55A8BFF8D76516397 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheVeganMeals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -353,6 +396,7 @@
 		};
 		091E9CF2261B658500C99735 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5DE08169971F8655174B2E /* Pods-TheVeganMeals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -360,7 +404,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TheVeganMeals/Preview Content\"";
 				DEVELOPMENT_TEAM = KT275Q2Y5T;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TheVeganMeals/Info.plist;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "TheVeganMeals/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,6 +420,7 @@
 		};
 		091E9CF3261B658500C99735 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B8027F19DB47CF560570B3B /* Pods-TheVeganMeals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,7 +428,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TheVeganMeals/Preview Content\"";
 				DEVELOPMENT_TEAM = KT275Q2Y5T;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TheVeganMeals/Info.plist;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = "TheVeganMeals/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
