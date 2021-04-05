@@ -55,11 +55,11 @@
 		091E9CE4261B658100C99735 /* TheVeganMeals */ = {
 			isa = PBXGroup;
 			children = (
-				091E9CE5261B658100C99735 /* TheVeganMealsApp.swift */,
-				091E9CE7261B658100C99735 /* ContentView.swift */,
-				091E9CE9261B658500C99735 /* Assets.xcassets */,
-				091E9CEE261B658500C99735 /* Info.plist */,
+				091E9CFB261B679400C99735 /* App */,
+				091E9CFD261B69CB00C99735 /* Core */,
+				091E9CFE261B69D800C99735 /* Module */,
 				091E9CEB261B658500C99735 /* Preview Content */,
+				091E9CFC261B67E600C99735 /* Supporting Files */,
 			);
 			path = TheVeganMeals;
 			sourceTree = "<group>";
@@ -70,6 +70,70 @@
 				091E9CEC261B658500C99735 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		091E9CFB261B679400C99735 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				091E9CE5261B658100C99735 /* TheVeganMealsApp.swift */,
+				091E9CE7261B658100C99735 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		091E9CFC261B67E600C99735 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				091E9CE9261B658500C99735 /* Assets.xcassets */,
+				091E9CEE261B658500C99735 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		091E9CFD261B69CB00C99735 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				091E9D02261B6A2A00C99735 /* Utils */,
+				091E9D01261B6A2000C99735 /* Domain */,
+				091E9D00261B6A1700C99735 /* DI */,
+				091E9CFF261B6A0E00C99735 /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		091E9CFE261B69D800C99735 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		091E9CFF261B6A0E00C99735 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		091E9D00261B6A1700C99735 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		091E9D01261B6A2000C99735 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		091E9D02261B6A2A00C99735 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
