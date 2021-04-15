@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TheVeganMealsApp: App {
+
+  @StateObject var homePresenter = HomePresenter(homeUseCase: Injection.init().provideHome())
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(homePresenter)
         }
     }
 }
