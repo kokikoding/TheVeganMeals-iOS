@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		091E9CE2261B658100C99735 /* TheVeganMeals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVeganMeals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		091E9CE2261B658100C99735 /* The Vegan Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Vegan Meals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		091E9CE5261B658100C99735 /* TheVeganMealsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVeganMealsApp.swift; sourceTree = "<group>"; };
 		091E9CE7261B658100C99735 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		091E9CE9261B658500C99735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		091E9CE3261B658100C99735 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				091E9CE2261B658100C99735 /* TheVeganMeals.app */,
+				091E9CE2261B658100C99735 /* The Vegan Meals.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,17 +146,9 @@
 		091E9D20261B790100C99735 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				091E9D22261B790D00C99735 /* View */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		091E9D22261B790D00C99735 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				091E9D23261B791C00C99735 /* HomeView.swift */,
 			);
-			name = View;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		573C0016ED43F001AB03637E /* Frameworks */ = {
@@ -194,7 +186,7 @@
 			);
 			name = TheVeganMeals;
 			productName = TheVeganMeals;
-			productReference = 091E9CE2261B658100C99735 /* TheVeganMeals.app */;
+			productReference = 091E9CE2261B658100C99735 /* The Vegan Meals.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -432,7 +424,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.kokikoding.TheVeganMeals;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The Vegan Meals";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -456,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.kokikoding.TheVeganMeals;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The Vegan Meals";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

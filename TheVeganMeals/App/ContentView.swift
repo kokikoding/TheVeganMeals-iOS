@@ -30,7 +30,8 @@ struct ContentView: View {
                     self.isActive = true
                 }
             }
-        }.statusBar(hidden: true)
+        }
+        .statusBar(hidden: true)
     }
 }
 
